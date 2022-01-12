@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <script src="dashboard.js"></script>
+</head>
+<body>
+  <main class="main">
+      <div class="main__user main__cards--radius">
+        <div class="main__user-info main__cards--radius">
+          <img src="images/image-jeremy.png" class="main__user-image" alt="Picture of user (smiling / near to laughing Jeremy Robson).">
+          <h1 class="main__user-text">
+            <span class="main__user-text--small">Report for</span>
+            Jeremy Robson
+          </h1>
+        </div>
+        <div class="main__duration main__cards--radius">
+        <ul role="tablist" class="main__duration-tabs" aria-label="Choose between daily weekly and monthly stats">
+          <li class="main__duration-type"><button role="tab" aria-selected="false" aria-controls="daily-stats" id="tab-1" tabindex="-1" class="main__duration-type--tab">Daily</button></li>
+          <li class="main__duration-type"><button role="tab" aria-selected="true" aria-controls="weekly-stats" id="tab-2" tabindex="0" class="main__duration-type--tab" disabled>Weekly</button></li>
+          <li class="main__duration-type"><button role="tab" aria-selected="false" aria-controls="monthly-stats" id="tab-3" tabindex="-1" class="main__duration-type--tab">Monthly</button></li>
+        </ul>
+      </div>
+      </div>
+      <ul class="main__cards--wrapper" id="daily-stats" role="tabpanel" tabindex="-1" aria-labelledby="tab-1" hidden>
+        <li class="main__stats-card work-card main__cards--radius">
+          <h2 class="main__stats-category" id="work-card-heading">
+            <a href="#" class="link">Work</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="work-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="work-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="work-card-heading"><span class="main__stats-current-count">5hrs</span>
+          <span class="main__stats-previous-count"> Last Day - 7hrs </span></p>
+        </li>
+        <li class="main__stats-card play-card main__cards--radius">
+          <h2 class="main__stats-category" id="play-card-heading">
+            <a href="#" class="link">Play</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="play-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="play-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="play-card-heading"><span class="main__stats-current-count">1hr</span>
+          <span class="main__stats-previous-count">Last Day - 2hrs </span></p>
+        </li>
+        <li class="main__stats-card study-card main__cards--radius">
+          <h2 class="main__stats-category" id="study-card-heading">
+            <a href="#" class="link">Study</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="study-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="study-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="study-card-heading"><span class="main__stats-current-count">0hrs</span>
+          <span class="main__stats-previous-count">Last Day - 1hr </span></p>
+        </li>
+        <li class="main__stats-card exercise-card main__cards--radius">
+          <h2 class="main__stats-category" id="exercise-card-heading">
+            <a href="#" class="link">Exercise</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="exercise-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="exercise-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="exercise-card-heading"><span class="main__stats-current-count">1hr</span>
+          <span class="main__stats-previous-count">Last Day - 1hr </span></p>
+        </li>
+        <li class="main__stats-card social-card main__cards--radius">
+          <h2 class="main__stats-category" id="social-card-heading">
+            <a href="#" class="link">Social</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="social-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="social-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="social-card-heading"><span class="main__stats-current-count">1hr</span>
+          <span class="main__stats-previous-count">Last Day - 3hrs </span></p>
+        </li>
+        <li class="main__stats-card self-care-card main__cards--radius">
+          <h2 class="main__stats-category" id="selfcare-card-heading">
+            <a href="#" class="link">Self Care</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="selfcare-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="selfcare-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="selfcare-card-heading"><span class="main__stats-current-count">0hrs</span>
+          <span class="main__stats-previous-count">Last Day - 1hr </span></p>
+        </li>
+
+      </ul>
+      <!-- weekly -->
+      <ul class="main__cards--wrapper" id="weekly-stats" role="tabpanel" tabindex="0" aria-labelledby="tab-2">
+        <li class="main__stats-card work-card main__cards--radius">
+          <h2 class="main__stats-category" id="work-card-heading">
+            <a href="#" class="link">Work</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="work-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="work-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="work-card-heading"><span class="main__stats-current-count">32hrs</span>
+          <span class="main__stats-previous-count">Last Week - 36hrs </span></p>
+        </li>
+
+        <li class="main__stats-card play-card main__cards--radius">
+          <h2 class="main__stats-category" id="play-card-heading">
+            <a href="#" class="link">Play</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="play-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="play-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="play-card-heading"><span class="main__stats-current-count">10hrs</span>
+          <span class="main__stats-previous-count">Last Week - 8hrs </span></p>
+        </li>
+
+        <li class="main__stats-card study-card main__cards--radius">
+          <h2 class="main__stats-category" id="study-card-heading">
+            <a href="#" class="link">Study</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="study-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="study-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="study-card-heading"><span class="main__stats-current-count">4hrs</span>
+          <span class="main__stats-previous-count">Last Week - 7hrs </span></p>
+        </li>
+
+        <li class="main__stats-card exercise-card main__cards--radius">
+          <h2 class="main__stats-category" id="exercise-card-heading">
+            <a href="#" class="link">Exercise</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="exercise-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="exercise-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="exercise-card-heading"><span class="main__stats-current-count">4hrs</span>
+          <span class="main__stats-previous-count">Last Week - 5hrs </span></p>
+        </li>
+
+        <li class="main__stats-card social-card main__cards--radius">
+          <h2 class="main__stats-category" id="social-card-heading">
+            <a href="#" class="link">Social</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="social-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="social-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="social-card-heading"><span class="main__stats-current-count">5hrs</span>
+          <span class="main__stats-previous-count">Last Week - 10hrs </span></p>
+        </li>
+
+
+        <li class="main__stats-card self-care-card main__cards--radius">
+          <h2 class="main__stats-category" id="selfcare-card-heading">
+            <a href="#" class="link">Self Care</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="selfcare-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="selfcare-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="selfcare-card-heading"><span class="main__stats-current-count">2hrs</span>
+          <span class="main__stats-previous-count">Last Week - 2hrs </span></p>
+        </li>
+      </ul>
+      <!-- Monthly -->
+      <ul class="main__cards--wrapper" id="monthly-stats" role="tabpanel" tabindex="-1" aria-labelledby="tab-3" hidden>
+        <li class="main__stats-card work-card main__cards--radius">
+          <h2 class="main__stats-category" id="work-card-heading">
+            <a href="#" class="link">Work</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="work-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="work-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="work-card-heading"><span class="main__stats-current-count">103hrs</span>
+          <span class="main__stats-previous-count">Last Month - 128hrs </span></p>
+        </li>
+        <li class="main__stats-card play-card main__cards--radius">
+          <h2 class="main__stats-category" id="play-card-heading">
+            <a href="#" class="link">Play</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="play-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="play-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="play-card-heading"><span class="main__stats-current-count">23hrs</span>
+          <span class="main__stats-previous-count">Last Month - 29hrs </span></p>
+        </li>
+        <li class="main__stats-card study-card main__cards--radius">
+          <h2 class="main__stats-category" id="study-card-heading">
+            <a href="#" class="link">Study</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="study-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="study-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="study-card-heading"><span class="main__stats-current-count">13hrs</span>
+          <span class="main__stats-previous-count">Last Month - 19hrs </span></p>
+        </li>
+        <li class="main__stats-card exercise-card main__cards--radius">
+          <h2 class="main__stats-category" id="exercise-card-heading">
+            <a href="#" class="link">Exercise</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="exercise-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="exercise-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="exercise-card-heading"><span class="main__stats-current-count">11hrs</span>
+          <span class="main__stats-previous-count">Last Month - 18hrs </span></p>
+        </li>
+        <li class="main__stats-card social-card main__cards--radius">
+          <h2 class="main__stats-category" id="social-card-heading">
+            <a href="#" class="link">Social</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="social-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="social-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="social-card-heading"><span class="main__stats-current-count">21hrs</span>
+          <span class="main__stats-previous-count">Last Month - 23hrs </span></p>
+        </li>
+        <li class="main__stats-card self-care-card main__cards--radius">
+          <h2 class="main__stats-category" id="selfcare-card-heading">
+            <a href="#" class="link">Self Care</a>
+          </h2>
+          <button class="main__card-menu">
+            <svg class="main__card-menu-ellipsis" aria-describedby="selfcare-stats-menu" width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <title id="selfcare-stats-menu">Card Menu</title>
+              <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+            </svg>
+          </button>
+          <p class="main__stats-stats" aria-describedby="selfcare-card-heading"><span class="main__stats-current-count">7hrs</span>
+          <span class="main__stats-previous-count">Last Month - 11hrs </span></p>
+        </li>
+      </ul>
+  </main>
+</body>
+</html>
