@@ -275,14 +275,14 @@ body {
   background-position: top -0.2rem right 0.9rem;
 }
 
-@media only screen and (min-width:900px) {
+@media only screen and (min-width:980px) {
 
   .main{
     display: flex;
     grid-template-columns: auto;
     grid-template-rows: auto;
     height: auto;
-    padding: 3rem;
+    padding: 3rem 1rem;
     justify-content: center;
     align-items: center;
   }
