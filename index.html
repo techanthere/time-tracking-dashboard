@@ -22,15 +22,15 @@
           </h1>
         </div>
         <div class="main__duration main__cards--radius">
-        <ul role="tablist" class="main__duration-tabs" aria-label="Choose between daily weekly and monthly stats">
-          <li role="presentation" class="main__duration-type"><button role="tab" aria-selected="false" aria-controls="daily-stats" id="tab-1" class="main__duration-type--tab">Daily</button></li>
-          <li role="presentation" class="main__duration-type"><button role="tab" aria-selected="true" aria-controls="weekly-stats" id="tab-2" class="main__duration-type--tab">Weekly</button></li>
-          <li role="presentation" class="main__duration-type"><button role="tab" aria-selected="false" aria-controls="monthly-stats" id="tab-3" class="main__duration-type--tab">Monthly</button></li>
-        </ul>
+        <div role="tablist" class="main__duration-tabs" aria-label="Choose between daily weekly and monthly stats">
+          <button role="tab" aria-selected="false" aria-controls="daily-stats" id="tab-1" class="main__duration-type--tab">Daily</button>
+          <button role="tab" aria-selected="true" aria-controls="weekly-stats" id="tab-2" class="main__duration-type--tab">Weekly</button>
+          <button role="tab" aria-selected="false" aria-controls="monthly-stats" id="tab-3" class="main__duration-type--tab">Monthly</button>
+        </div>
       </div>
       </div>
-      <ul class="main__cards--wrapper" id="daily-stats" role="tabpanel" aria-labelledby="tab-1" hidden>
-        <li class="main__stats-card work-card main__cards--radius">
+      <div class="main__cards--wrapper" id="daily-stats" role="tabpanel" aria-labelledby="tab-1" hidden>
+        <div class="main__stats-card work-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Work</a>
           </h2>
@@ -42,8 +42,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">5hrs</span>
           <span class="main__stats-previous-count"> Last Day - 7hrs </span></p>
-        </li>
-        <li class="main__stats-card play-card main__cards--radius">
+        </div>
+        <div class="main__stats-card play-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Play</a>
           </h2>
@@ -55,8 +55,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">1hr</span>
           <span class="main__stats-previous-count">Last Day - 2hrs </span></p>
-        </li>
-        <li class="main__stats-card study-card main__cards--radius">
+        </div>
+        <div class="main__stats-card study-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Study</a>
           </h2>
@@ -68,8 +68,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">0hrs</span>
           <span class="main__stats-previous-count">Last Day - 1hr </span></p>
-        </li>
-        <li class="main__stats-card exercise-card main__cards--radius">
+        </div>
+        <div class="main__stats-card exercise-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Exercise</a>
           </h2>
@@ -81,8 +81,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">1hr</span>
           <span class="main__stats-previous-count">Last Day - 1hr </span></p>
-        </li>
-        <li class="main__stats-card social-card main__cards--radius">
+        </div>
+        <div class="main__stats-card social-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Social</a>
           </h2>
@@ -94,8 +94,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">1hr</span>
           <span class="main__stats-previous-count">Last Day - 3hrs </span></p>
-        </li>
-        <li class="main__stats-card self-care-card main__cards--radius">
+        </div>
+        <div class="main__stats-card self-care-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Self Care</a>
           </h2>
@@ -107,12 +107,12 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">0hrs</span>
           <span class="main__stats-previous-count">Last Day - 1hr </span></p>
-        </li>
+        </div>
 
-      </ul>
+      </div>
       <!-- weekly -->
-      <ul class="main__cards--wrapper" id="weekly-stats" role="tabpanel" aria-labelledby="tab-2">
-        <li class="main__stats-card work-card main__cards--radius">
+      <div class="main__cards--wrapper" id="weekly-stats" role="tabpanel" aria-labelledby="tab-2">
+        <div class="main__stats-card work-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Work</a>
           </h2>
@@ -124,9 +124,9 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">32hrs</span>
           <span class="main__stats-previous-count">Last Week - 36hrs </span></p>
-        </li>
+        </div>
 
-        <li class="main__stats-card play-card main__cards--radius">
+        <div class="main__stats-card play-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Play</a>
           </h2>
@@ -138,9 +138,9 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">10hrs</span>
           <span class="main__stats-previous-count">Last Week - 8hrs </span></p>
-        </li>
+        </div>
 
-        <li class="main__stats-card study-card main__cards--radius">
+        <div class="main__stats-card study-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Study</a>
           </h2>
@@ -152,9 +152,9 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">4hrs</span>
           <span class="main__stats-previous-count">Last Week - 7hrs </span></p>
-        </li>
+        </div>
 
-        <li class="main__stats-card exercise-card main__cards--radius">
+        <div class="main__stats-card exercise-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Exercise</a>
           </h2>
@@ -166,9 +166,9 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">4hrs</span>
           <span class="main__stats-previous-count">Last Week - 5hrs </span></p>
-        </li>
+        </div>
 
-        <li class="main__stats-card social-card main__cards--radius">
+        <div class="main__stats-card social-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Social</a>
           </h2>
@@ -180,10 +180,10 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">5hrs</span>
           <span class="main__stats-previous-count">Last Week - 10hrs </span></p>
-        </li>
+        </div>
 
 
-        <li class="main__stats-card self-care-card main__cards--radius">
+        <div class="main__stats-card self-care-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Self Care</a>
           </h2>
@@ -195,11 +195,11 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">2hrs</span>
           <span class="main__stats-previous-count">Last Week - 2hrs </span></p>
-        </li>
-      </ul>
+        </div>
+      </div>
       <!-- Monthly -->
-      <ul class="main__cards--wrapper" id="monthly-stats" role="tabpanel" aria-labelledby="tab-3" hidden>
-        <li class="main__stats-card work-card main__cards--radius">
+      <div class="main__cards--wrapper" id="monthly-stats" role="tabpanel" aria-labelledby="tab-3" hidden>
+        <div class="main__stats-card work-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Work</a>
           </h2>
@@ -211,8 +211,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">103hrs</span>
           <span class="main__stats-previous-count">Last Month - 128hrs </span></p>
-        </li>
-        <li class="main__stats-card play-card main__cards--radius">
+        </div>
+        <div class="main__stats-card play-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Play</a>
           </h2>
@@ -224,8 +224,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">23hrs</span>
           <span class="main__stats-previous-count">Last Month - 29hrs </span></p>
-        </li>
-        <li class="main__stats-card study-card main__cards--radius">
+        </div>
+        <div class="main__stats-card study-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Study</a>
           </h2>
@@ -237,8 +237,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">13hrs</span>
           <span class="main__stats-previous-count">Last Month - 19hrs </span></p>
-        </li>
-        <li class="main__stats-card exercise-card main__cards--radius">
+        </div>
+        <div class="main__stats-card exercise-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Exercise</a>
           </h2>
@@ -250,8 +250,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">11hrs</span>
           <span class="main__stats-previous-count">Last Month - 18hrs </span></p>
-        </li>
-        <li class="main__stats-card social-card main__cards--radius">
+        </div>
+        <div class="main__stats-card social-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Social</a>
           </h2>
@@ -263,8 +263,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">21hrs</span>
           <span class="main__stats-previous-count">Last Month - 23hrs </span></p>
-        </li>
-        <li class="main__stats-card self-care-card main__cards--radius">
+        </div>
+        <div class="main__stats-card self-care-card main__cards--radius">
           <h2 class="main__stats-category">
             <a href="#" class="link">Self Care</a>
           </h2>
@@ -276,8 +276,8 @@
           </button>
           <p class="main__stats-stats"><span class="main__stats-current-count">7hrs</span>
           <span class="main__stats-previous-count">Last Month - 11hrs </span></p>
-        </li>
-      </ul>
+        </div>
+      </div>
   </main>
 </body>
 </html>
